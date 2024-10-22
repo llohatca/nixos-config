@@ -74,6 +74,7 @@
     # usage pkgs #
     ##############
     firefox
+    vesktop
     telegram-desktop
     # inputs.ayugram-desktop.packages.${pkgs.system}.default
 
