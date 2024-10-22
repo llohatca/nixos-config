@@ -33,6 +33,7 @@
     };
 
     programs = {
+      steam.enable =  true;
       home-manager.enable = true;
       hyprland.enable = true;
       nix-helper.enable = true;
