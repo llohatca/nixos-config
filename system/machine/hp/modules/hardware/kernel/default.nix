@@ -7,6 +7,7 @@
     kernelParams = [
       "quiet"
       "splash"
+      "zswap.enabled=0"
     ];
 
     loader.grub.enable = true;

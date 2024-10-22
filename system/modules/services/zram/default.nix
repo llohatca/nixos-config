@@ -24,7 +24,7 @@ in {
       enable = true;
       priority = 32767;
       swapDevices = cfg.deviceNumber;
-      memoryPercent = 100;
+      # memoryPercent = 100;
     };
     boot.kernelParams = [
       "zswap.enabled=0"
