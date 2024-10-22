@@ -5,9 +5,9 @@
 with lib;
 
 let
-  cfg = config.modules.timezone;
+  cfg = config.module.timezone;
 in {
-  options.modules.timezone = {
+  options.module.timezone = {
     enable = mkEnableOption "Set timezone to Yekaterinburg";
   };
   config = mkIf cfg.enable {

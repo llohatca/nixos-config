@@ -9,16 +9,16 @@
       "splash"
     ];
 
-  loader.grub.enable = true;
-  loader.grub.device = "/dev/sda";
-  kernelPackages = pkgs.linuxPackages_zen;
+    loader.grub.enable = true;
+    loader.grub.device = "/dev/sda";
+    kernelPackages = pkgs.linuxPackages_zen;
 
-  kernelModules = [ ];
-  extraModulePackages = [ ];
-  initrd.kernelModules = [ ];
-  };
+    kernelModules = [ ];
+    extraModulePackages = [ ];
+  
 
     initrd = {
+      kernelModules = [ ];
       availableKernelModules = [ 
         "ehci_pci" 
         "ahci"
@@ -29,5 +29,7 @@
         "rtsx_pci_sdmmc" 
       ];
     };
+
+  };
 
 }

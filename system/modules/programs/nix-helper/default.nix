@@ -7,10 +7,10 @@
 with lib;
 
 let
-  cfg = config.modules.programs.nix-helper;
+  cfg = config.module.programs.nix-helper;
 in {
   options = {
-    modules.programs.nix-helper.enable = mkEnableOption "Enables nix-helper";
+    module.programs.nix-helper.enable = mkEnableOption "Enables nix-helper";
   };
 
   config = mkIf cfg.enable {

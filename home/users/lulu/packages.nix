@@ -75,7 +75,7 @@
     ##############
     firefox
     telegram-desktop
-    #inputs.ayugram-desktop.packages.${pkgs.system}.default
+    # inputs.ayugram-desktop.packages.${pkgs.system}.default
 
     #for nekoray
     nekoray

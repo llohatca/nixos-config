@@ -7,10 +7,10 @@
 with lib;
 
 let
-  cfg = config.modules.programs.systemPackages;
+  cfg = config.module.programs.systemPackages;
 in {
   options = {
-    modules.programs.systemPackages.enable = mkEnableOption "Enable System Software";
+    module.programs.systemPackages.enable = mkEnableOption "Enable System Software";
   };
 
   config = mkIf cfg.enable {

@@ -7,16 +7,16 @@
 with lib;
 
 let
-  cfg = config.modules.programs.hm;
+  cfg = config.module.programs.home-manager;
 in {
   options = {
-    modules.programs.hm.enable = mkEnableOption "Enable Home Manager";
+    module.programs.home-manager.enable = mkEnableOption "Enable Home Manager";
   };
 
   config = mkIf cfg.enable {
     home-manager = {
-      useGlobalPkgs = true;
-      useUserPackages = true; 
+      # useGlobalPkgs = true;
+      # useUserPackages = true; 
       extraSpecialArgs = {
         inherit inputs;
       };

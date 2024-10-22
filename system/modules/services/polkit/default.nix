@@ -6,10 +6,10 @@
 with lib;
 
 let
-  cfg = config.modules.services.polkit;
+  cfg = config.module.services.polkit;
 in {
   options = {
-    modules.services.polkit.enable = mkEnableOption "Enable polkit";
+    module.services.polkit.enable = mkEnableOption "Enable polkit";
   };
 
   config = mkIf cfg.enable {

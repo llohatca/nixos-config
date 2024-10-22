@@ -41,9 +41,9 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
-    # nix-topology = {
-    #   url = "github:oddlama/nix-topology";
-    # };
+    nix-topology = {
+      url = "github:oddlama/nix-topology";
+    };
 
     impermanence = {
       url = "github:/nix-community/impermanence";
@@ -60,7 +60,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ayugram-desktop.url = "github:kaeeraa/ayugram-desktop/release?submodules=1";
+    # ayugram-desktop.url = "github:kaeeraa/ayugram-desktop/release?submodules=1";
 
     # minimal-tmux = {
     #   url = "github:niksingh710/minimal-tmux-status";
