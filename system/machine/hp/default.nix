@@ -2,19 +2,25 @@
 }:
 {
   module = {
+    tty.enable = true;
     boot.enable = false;
     sound.enable = true;
     timezone.enable = true;
+    locale.enable = true;
     users.enable = true;
 
 
 
     services = {
+      greetd = {
+        enable = true;
+        frontend = "tui";
+      };
       network.enable = true;
       polkit.enable = true;
       zapret-config.enable = true;
       flatpak.enable = true;
-      # gvfs.enable = true;
+      gvfs.enable = true;
 
       zram = {
         enable = true;
@@ -33,6 +39,7 @@
 
     programs = {
       dconf.enable = true;
+      fonts.enable = true;
       steam.enable =  true;
       home-manager.enable = true;
       hyprland.enable = true;
