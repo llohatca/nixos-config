@@ -16,6 +16,7 @@
         enable = true;
         frontend = "tui";
       };
+      systemd-oomd.enable = true;
       network.enable = true;
       polkit.enable = true;
       zapret-config.enable = true;
