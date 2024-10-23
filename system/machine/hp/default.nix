@@ -13,8 +13,7 @@
       network.enable = true;
       polkit.enable = true;
       zapret-config.enable = true;
-      
-      # flatpak.enable = true;
+      flatpak.enable = true;
       # gvfs.enable = true;
 
       zram = {
@@ -33,6 +32,7 @@
     };
 
     programs = {
+      dconf.enable = true;
       steam.enable =  true;
       home-manager.enable = true;
       hyprland.enable = true;
