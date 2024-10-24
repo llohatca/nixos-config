@@ -12,6 +12,7 @@
 
   home.packages = with pkgs; [
     #for Games
+    arduino-ide
 
 
 
