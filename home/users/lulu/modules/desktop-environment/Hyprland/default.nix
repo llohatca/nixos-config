@@ -3,7 +3,7 @@ let
   terminal = "alacritty";
   fileManager = "nemo";
   menu = "ags -t applauncher";
-  # vibrance = "hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl";
+  # brightnessUpdate = "hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl";
 in 
 {
   # imports = [
@@ -192,10 +192,10 @@ in
         ", Print, exec, grimblast --notify --freeze copysave output"
         "Ctrl, Print,  exec, grimblast --notify --freeze copysave area"
 
-        "$mod, L, movefocus, r"
-        "$mod, H, movefocus, l"
-        "$mod, K, movefocus, u"
-        "$mod, J, movefocus, d"
+        # "$mod, L, movefocus, r"
+        # "$mod, H, movefocus, l"
+        # "$mod, K, movefocus, u"
+        # "$mod, J, movefocus, d"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
@@ -222,19 +222,23 @@ in
         "$mod, S, togglespecialworkspace, magic"
         "$mod SHIFT, S, movetoworkspace, special:magic"
 
-        "$mod SHIFT, H, swapwindow, l"
-        "$mod SHIFT, L, swapwindow, r"
-        "$mod SHIFT, K, swapwindow, u"
-        "$mod SHIFT, J, swapwindow, d"
-
-        "$mod CTRL, H, resizeactive, -20 0"
-        "$mod CTRL, L, resizeactive, 20 0"
-        "$mod CTRL, K, resizeactive, 0 -20"
-        "$mod CTRL, J, resizeactive, 0 20"
+        # "$mod SHIFT, H, swapwindow, l"
+        # "$mod SHIFT, L, swapwindow, r"
+        # "$mod SHIFT, K, swapwindow, u"
+        # "$mod SHIFT, J, swapwindow, d"
+        #
+        # "$mod CTRL, H, resizeactive, -20 0"
+        # "$mod CTRL, L, resizeactive, 20 0"
+        # "$mod CTRL, K, resizeactive, 0 -20"
+        # "$mod CTRL, J, resizeactive, 0 20"
 
 
         "$mod, mouse_down, workspace, e-1"
         "$mod, mouse_up, workspace, e+1"
+
+        "$mod, J, exec, ~/nixos-config/home/users/lulu/modules/desktop-environment/Hyprland/brightness.sh -up 10 && hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl"
+        "$mod, K, exec, ~/nixos-config/home/users/lulu/modules/desktop-environment/Hyprland/brightness.sh +up 10 && hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl"
+
       ];
 
       bindm = [
