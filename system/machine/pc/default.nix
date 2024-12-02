@@ -1,0 +1,52 @@
+{ ...
+}:
+{
+  module = {
+    tty.enable = true;
+    boot.enable = false;
+    sound.enable = true;
+    timezone.enable = true;
+    locale.enable = true;
+    users.enable = true;
+
+
+
+    services = {
+      greetd = {
+        enable = true;
+        frontend = "tui";
+      };
+      systemd-oomd.enable = true;
+      network.enable = true;
+      polkit.enable = true;
+      zapret-config.enable = true;
+      flatpak.enable = true;
+      gvfs.enable = true;
+
+      zram = {
+        enable = true;
+        deviceNumber = 2;
+      };
+
+      # openssh = {
+      #  enable = true;
+      #  settings = {
+      #    PasswordAuthentication = false;
+      #    KbdInteractiveAuthentication = false;
+      #  };
+      # };
+
+    };
+
+    programs = {
+      dconf.enable = true;
+      fonts.enable = true;
+      steam.enable =  true;
+      home-manager.enable = true;
+      hyprland.enable = true;
+      nix-helper.enable = true;
+      systemPackages.enable = true;
+    };
+  };
+}
+

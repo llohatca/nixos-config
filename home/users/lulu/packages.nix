@@ -11,18 +11,25 @@
   };
 
   home.packages = with pkgs; [
-    #for Games
+    #for my life
+    clang-tools
+    clang
+    cargo
+    rustc
+    picocom
     arduino-ide
+    arduino-cli
+    # android-studio
+    # jdk
 
 
 
     #############
     # cli tools #
     #############
-    # zerotierone
+    # zerotieron
 
     ## system control ##
-    htop
     btop
     powertop
     wl-clipboard

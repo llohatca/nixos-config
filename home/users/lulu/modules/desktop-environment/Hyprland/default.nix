@@ -64,6 +64,7 @@ in
       ];
 
       exec = [
+        # "nohup ~/my_project_py/myvenv/bin/python ~/my_project_py/myvenv/src/toggle_mute.py &"
         "ags"
         "hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl"
         #for nekoray
@@ -238,6 +239,8 @@ in
 
         "$mod, J, exec, ~/nixos-config/home/users/lulu/modules/desktop-environment/Hyprland/brightness.sh -up 10 && hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl"
         "$mod, K, exec, ~/nixos-config/home/users/lulu/modules/desktop-environment/Hyprland/brightness.sh +up 10 && hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl"
+
+        "ALT, Z, exec, pactl set-source-mute alsa_input.pci-0000_00_1b.0.analog-stereo toggle"
 
       ];
 
