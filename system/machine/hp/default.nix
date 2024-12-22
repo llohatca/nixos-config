@@ -22,6 +22,8 @@
       zapret-config.enable = true;
       flatpak.enable = true;
       gvfs.enable = true;
+      zerotier-one.enable = true;
+
 
       zram = {
         enable = true;
