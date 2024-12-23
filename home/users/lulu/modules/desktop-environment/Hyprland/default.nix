@@ -2,7 +2,8 @@
 let
   terminal = "alacritty";
   fileManager = "nemo";
-  menu = "ags -t applauncher";
+  menu = "ags toggle AppLauncher --instance astal";
+  micOverlay = "ags toggle MicOverlay --instance astal";
   # brightnessUpdate = "hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl";
 in 
 {
@@ -14,15 +15,16 @@ in
     grimblast
     nwg-dock-hyprland
   ];
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-    config.common.default = "*";
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-hyprland
-    ];
-  };
+
+    xdg.portal = {
+      enable = true;
+      xdgOpenUsePortal = true;
+      config.common.default = "gtk";
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-hyprland
+      ];
+    };
 
   home.sessionVariables = {
     XDG_CURRENT_DESKTOP = "Hyprland";
@@ -65,7 +67,7 @@ in
 
       exec = [
         # "nohup ~/my_project_py/myvenv/bin/python ~/my_project_py/myvenv/src/toggle_mute.py &"
-        "ags"
+        "ags run"
         "hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl"
         #for nekoray
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
@@ -117,14 +119,14 @@ in
           ignore_opacity = true;
           xray = false;
         };
-        #layerrule = blur,rofi
-        #layerrule = ignorealpha [1],rofi
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
 
-        "col.shadow" = "rgba(1a1a1aee)";
-        dim_inactive = false;
+        shadow = {
+          enabled = false;
+          range = 30;
+          offset = "2 3";
+          render_power = 3;
+          color = "rgba(1a1a1aee)";
+        };
       };
 
       animations = {
@@ -241,7 +243,7 @@ in
         "$mod, K, exec, ~/nixos-config/home/users/lulu/modules/desktop-environment/Hyprland/brightness.sh +up 10 && hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl"
 
         "ALT, Z, exec, pactl set-source-mute alsa_input.pci-0000_00_1b.0.analog-stereo toggle"
-
+        "$mod, O, exec, ${micOverlay}"
       ];
 
       bindm = [
