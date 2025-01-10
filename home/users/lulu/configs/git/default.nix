@@ -1,7 +1,7 @@
 {
   programs.git = {
     enable = true;
-    userName  = "llohatca";
+    userName = "llohatca";
     userEmail = "llohatca@gmail.com";
     extraConfig = {
       init.defaultBranch = "main";

@@ -22,8 +22,8 @@
       zapret-config.enable = true;
       flatpak.enable = true;
       gvfs.enable = true;
-    zerotier-one.enable = true;
-openssh.enable = true;
+      zerotier-one.enable = true;
+      openssh.enable = true;
 
       zram = {
         enable = true;
@@ -35,7 +35,7 @@ openssh.enable = true;
     programs = {
       dconf.enable = true;
       fonts.enable = true;
-      steam.enable =  true;
+      steam.enable = true;
       home-manager.enable = true;
       hyprland.enable = true;
       nix-helper.enable = true;

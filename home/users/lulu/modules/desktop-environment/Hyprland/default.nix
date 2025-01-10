@@ -5,7 +5,7 @@ let
   menu = "ags toggle AppLauncher --instance astal";
   micOverlay = "ags toggle MicOverlay --instance astal";
   # brightnessUpdate = "hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl";
-in 
+in
 {
   # imports = [
   #   ./sessionVariables.nix
@@ -16,15 +16,15 @@ in
     nwg-dock-hyprland
   ];
 
-    xdg.portal = {
-      enable = true;
-      xdgOpenUsePortal = true;
-      config.common.default = "gtk";
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-gtk
-        xdg-desktop-portal-hyprland
-      ];
-    };
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    config.common.default = "gtk";
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
+    ];
+  };
 
   home.sessionVariables = {
     XDG_CURRENT_DESKTOP = "Hyprland";
@@ -90,7 +90,7 @@ in
         accel_profile = "flat";
       };
 
-      device  = {
+      device = {
         name = "epic-mouse-v1";
         sensitivity = -0.5;
         accel_profile = "flat";
@@ -160,7 +160,7 @@ in
         force_default_wallpaper = 0;
       };
 
-      workspace = 
+      workspace =
         [
           "1,monitor:LVDS-1, default:true"
           "2,monitor:LVDS-1"

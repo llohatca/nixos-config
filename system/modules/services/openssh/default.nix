@@ -12,11 +12,11 @@ in
   options.module.services.openssh.enable = mkEnableOption "Enable openssh";
   config = mkIf cfg.enable {
     services.openssh = {
-        enable = true;
-        settings = {
-          PasswordAuthentication = false;
-         KbdInteractiveAuthentication = false;
-       };
+      enable = true;
+      settings = {
+        PasswordAuthentication = false;
+        KbdInteractiveAuthentication = false;
+      };
     };
   };
 }

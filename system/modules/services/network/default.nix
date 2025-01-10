@@ -1,8 +1,8 @@
 { lib
-  , config
-  , hostname
-  , pkgs
-  , ...
+, config
+, hostname
+, pkgs
+, ...
 }:
 with lib;
 let
@@ -39,7 +39,7 @@ in
         description = ''
           Set the MAC address of the interface
         '';
-        
+
       };
     };
   };

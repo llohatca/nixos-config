@@ -10,23 +10,23 @@
     # configDir = ../ags;
 
     # additional packages to add to gjs's runtime
-  
-  extraPackages = with pkgs; [
-        fzf
-        wrapGAppsHook
-        gobject-introspection
-      ] ++ (with inputs.astal.packages.${pkg.system}; [
-        io
-        astal3
-        apps
-        battery
-        hyprland
-        mpris
-        network
-        notifd
-        powerprofiles
-        tray
-        wireplumber
-      ]);
+
+    extraPackages = with pkgs; [
+      fzf
+      wrapGAppsHook
+      gobject-introspection
+    ] ++ (with inputs.astal.packages.${pkg.system}; [
+      io
+      astal3
+      apps
+      battery
+      hyprland
+      mpris
+      network
+      notifd
+      powerprofiles
+      tray
+      wireplumber
+    ]);
   };
 }

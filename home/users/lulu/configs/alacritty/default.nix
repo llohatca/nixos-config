@@ -2,14 +2,14 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      font  = {
+      font = {
         size = 14.3;
       };
 
-    window = {
-      opacity = 0.67;
-      blur = true;
-    };
+      window = {
+        opacity = 0.67;
+        blur = true;
+      };
 
       colors.primary = {
         background = "#20202A";

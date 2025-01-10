@@ -16,18 +16,18 @@
 
     kernelModules = [ ];
     extraModulePackages = [ ];
-  
+
 
     initrd = {
       kernelModules = [ ];
-      availableKernelModules = [ 
-        "ehci_pci" 
+      availableKernelModules = [
+        "ehci_pci"
         "ahci"
         "usbhid"
         "usb_storage"
         "sd_mod"
         "sr_mod"
-        "rtsx_pci_sdmmc" 
+        "rtsx_pci_sdmmc"
       ];
     };
 

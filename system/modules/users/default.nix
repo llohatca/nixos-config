@@ -9,7 +9,8 @@ with lib;
 
 let
   cfg = config.module.users;
-in {
+in
+{
   options = {
     module.users.enable = mkEnableOption "Enables users";
   };
@@ -18,7 +19,7 @@ in {
     users = {
       mutableUsers = false;
 
-      groups = { 
+      groups = {
         ${username} = {
           gid = 1000;
         };
@@ -26,14 +27,14 @@ in {
 
       users = {
         ${username} = {
-          uid                = 1000;
-          home               = "/home/${username}";
-          shell              = pkgs.bash;
-          group              = "${username}";
-          createHome         = true;
-          description        = "${username}";
-          isSystemUser       = true;
-          hashedPassword     = "$6$o0qg..L6EMGo.l2k$4PFVHl.mumawQ9wMJc1Z4in2EgRh3oEDZ8cXqxnXAqNHkKWe4eWt.119L/fHMIQKO4slPBCd97A2zY9zurMRZ1";
+          uid = 1000;
+          home = "/home/${username}";
+          shell = pkgs.bash;
+          group = "${username}";
+          createHome = true;
+          description = "${username}";
+          isSystemUser = true;
+          hashedPassword = "$6$o0qg..L6EMGo.l2k$4PFVHl.mumawQ9wMJc1Z4in2EgRh3oEDZ8cXqxnXAqNHkKWe4eWt.119L/fHMIQKO4slPBCd97A2zY9zurMRZ1";
 
           extraGroups = [
             "video"
@@ -47,7 +48,7 @@ in {
         };
 
         root = {
-          hashedPassword     = "$6$o0qg..L6EMGo.l2k$4PFVHl.mumawQ9wMJc1Z4in2EgRh3oEDZ8cXqxnXAqNHkKWe4eWt.119L/fHMIQKO4slPBCd97A2zY9zurMRZ1";
+          hashedPassword = "$6$o0qg..L6EMGo.l2k$4PFVHl.mumawQ9wMJc1Z4in2EgRh3oEDZ8cXqxnXAqNHkKWe4eWt.119L/fHMIQKO4slPBCd97A2zY9zurMRZ1";
         };
       };
     };

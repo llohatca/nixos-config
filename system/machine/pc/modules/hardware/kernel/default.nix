@@ -16,7 +16,7 @@
 
     kernelModules = [ ];
     extraModulePackages = [ ];
-  
+
 
     initrd = {
       kernelModules = [ ];
