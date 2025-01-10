@@ -37,7 +37,7 @@
       fonts.enable = true;
       steam.enable = true;
       home-manager.enable = true;
-      hyprland.enable = true;
+      dwm.enable = true;
       nix-helper.enable = true;
       systemPackages.enable = true;
     };

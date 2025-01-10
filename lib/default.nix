@@ -24,7 +24,8 @@ let
       machineModulesPath = "${self}/system/machine/${machineDir}/modules";
       machineModulesPathExist = builtins.pathExists machineModulesPath;
       hyprlandEnable = wm == "hyprland";
-      deEnable = hyprlandEnable;
+      dwmEnable = wm == "dwm";
+      deEnable = hyprlandEnable || dwmEnable;
     in
     inputs.nixpkgs.lib.nixosSystem {
       specialArgs = {
@@ -46,6 +47,7 @@ let
           machineModulesPath
           machineModulesPathExist
           hyprlandEnable
+          dwmEnable
           deEnable;
       };
       modules = [
