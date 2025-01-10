@@ -22,19 +22,13 @@
       zapret-config.enable = true;
       flatpak.enable = true;
       gvfs.enable = true;
+    zerotier-one.enable = true;
+openssh.enable = true;
 
       zram = {
         enable = true;
         deviceNumber = 2;
       };
-
-      # openssh = {
-      #  enable = true;
-      #  settings = {
-      #    PasswordAuthentication = false;
-      #    KbdInteractiveAuthentication = false;
-      #  };
-      # };
 
     };
 
