@@ -19,7 +19,6 @@
       systemd-oomd.enable = true;
       network.enable = true;
       polkit.enable = true;
-      zapret-config.enable = true;
       flatpak.enable = true;
       gvfs.enable = true;
       zerotier-one.enable = true;
