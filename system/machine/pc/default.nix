@@ -6,6 +6,7 @@
     sound.enable = true;
     timezone.enable = true;
     locale.enable = true;
+    minimal.enable = true;
     users.enable = true;
 
 
