@@ -34,4 +34,10 @@
       fsType = "btrfs";
       options = [ "subvol=@.snapshots" ];
     };
+  swapDevices = [
+    {
+      device = "/swap/swapfile";
+      priority = 1;
+    }
+  ];
 }
