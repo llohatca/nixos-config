@@ -44,6 +44,7 @@
     programs = {
       dconf.enable = true;
       fonts.enable = true;
+      gamemode.enable = true;
       steam.enable = true;
       home-manager.enable = true;
       hyprland.enable = true;
