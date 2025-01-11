@@ -3,7 +3,6 @@
 {
   module = {
     tty.enable = true;
-    boot.enable = false;
     sound.enable = true;
     timezone.enable = true;
     locale.enable = true;
@@ -36,7 +35,7 @@
       fonts.enable = true;
       steam.enable = true;
       home-manager.enable = true;
-      dwm.enable = true;
+      hyprland.enable = true;
       nix-helper.enable = true;
       systemPackages.enable = true;
     };
