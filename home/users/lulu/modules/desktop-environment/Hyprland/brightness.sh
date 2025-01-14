@@ -22,6 +22,7 @@ else
   exit 1
 fi
 
+# Ограничение значений яркости
 if (( $(echo "$new_brightness < 0.0" | bc -l) )); then
   new_brightness=0.0
 elif (( $(echo "$new_brightness > 100.0" | bc -l) )); then
@@ -31,5 +32,5 @@ fi
 formatted_brightness=$(LC_NUMERIC=C printf "%.1f" "$new_brightness")
 
 # Обновление только значения яркости в файле с форматированием
-awk -v new_brightness="$formatted_brightness" '{sub(/float brightness = [0-9]+.[0-9]+;/, "float brightness = " new_brightness ";")}1' "$file_path" > temp && mv temp "$file_path"
+awk -v new_brightness="$formatted_brightness" '{if ($0 ~ /float brightness/) {sub(/float brightness = [0-9]+.[0-9]+;/, "float brightness = " new_brightness ";")} print}' "$file_path" > temp && mv temp "$file_path"
 

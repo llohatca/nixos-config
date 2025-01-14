@@ -39,7 +39,6 @@ in
       ltrace
       lsof
       sysstat
-      cpufetch
       sbctl
 
       # Utils

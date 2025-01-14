@@ -1,12 +1,19 @@
 { lib
+, pkgs
 , config
 , ...
 }:
 
 {
+  # Extra drivers settings
   hardware = {
+    enableAllFirmware = true;
+    enableRedistributableFirmware = true;
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-    acpilight.enable = true;
+
+    firmware = with pkgs; [
+        linux-firmware
+    ];
   };
 
   powerManagement.cpuFreqGovernor = "performance";

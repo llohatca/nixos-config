@@ -13,7 +13,6 @@ in
 
   home.packages = with pkgs; [
     grimblast
-    nwg-dock-hyprland
   ];
 
   xdg.portal = {
@@ -57,7 +56,10 @@ in
     xwayland.enable = true;
     systemd.enable = true;
     settings = {
-      monitor = "LVDS-1, 1366x768@59, 0x0, 1";
+      monitor = [
+        "LVDS-1, 1366x768@59, 0x0, 1"
+        "VGA-2, 1366x768@59, 1366x0, 1"
+      ];
 
       exec-once = [
         # "hyprctl setcursor Bibata-Modern-Ice 27"
@@ -170,8 +172,8 @@ in
           "6,monitor:LVDS-1"
           "7,monitor:LVDS-1"
           "8,monitor:LVDS-1"
-          "9,monitor:LVDS-1"
-          "0,monitor:LVDS-1"
+          "9,monitor:VGA-2, default:true"
+          "0,monitor:VGA-2"
         ];
 
       #  windowrulev2 = [

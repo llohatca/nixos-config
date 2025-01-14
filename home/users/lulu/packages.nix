@@ -11,11 +11,9 @@
   };
 
   home.packages = with pkgs; [
-    #for my howerboard
-    freecad
-
     #for bssid search
     protobuf
+
     #for my life
     clang-tools
     clang
@@ -62,6 +60,7 @@
 
     ## fetch ##
     fastfetch
+    cpufetch
 
 
     ###########################

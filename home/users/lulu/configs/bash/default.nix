@@ -8,6 +8,7 @@
       nf = "fastfetch";
       ls = "ls -a";
       his = "history";
+      lg = "lazygit";
       shadeon = "hyprshade on ~/.config/hyprshade/shaders/blue-light-filter.glsl";
       shadeoff = "hyprshade off";
 
